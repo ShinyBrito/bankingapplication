@@ -15,7 +15,7 @@ pipeline{
                     sshPublisher(
                         continueOnError: false, failOnError: true,
                         publishers: [
-                            sshPublisherDesc( configName: "cape-demo-registry.southeastasia.cloudapp.azure.com", verbose: false, transfers: [
+                            sshPublisherDesc( configName: 'demo-reg', verbose: false, transfers: [
                             sshTransfer(
                                 sourceFiles: "DemoApp100-1.0.0.tgz ",
                                 remoteDirectory: "demoapp",
