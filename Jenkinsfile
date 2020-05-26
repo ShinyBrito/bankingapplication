@@ -15,19 +15,19 @@ pipeline{
                     sshPublisher(
                         continueOnError: false, failOnError: true,
                         publishers: [
-                            sshPublisherDesc( configName: configName, verbose: false, transfers: [
+                            sshPublisherDesc( configName: "cape-demo-registry.southeastasia.cloudapp.azure.com", verbose: false, transfers: [
                             sshTransfer(
                                 sourceFiles: "DemoApp100-1.0.0.tgz ",
-                                remoteDirectory: "jenkins-promote",
-                                execCommand: "cd /opt
-                                                sudo mkdir -p node-bank
-                                                sudo pm2 stop index
-                                                sudo pm2 delete index
-                                                sudo rm -rf  /opt/node-bank/*
-                                            sudo mv -v /home/capeuser/demoapp/* /opt/node-bank
-                                            cd /opt/node-bank
-                                            sudo npm install DemoApp100-1.0.0.tgz 
-                                                cd node_modules/DemoApp100
+                                remoteDirectory: "demoapp",
+                                execCommand: "cd /opt \n
+                                                sudo mkdir -p node-bank \n
+                                                sudo pm2 stop index \n
+                                                sudo pm2 delete index \n
+                                                sudo rm -rf  /opt/node-bank/* \n
+                                            sudo mv -v /home/capeuser/demoapp/* /opt/node-bank \n
+                                            cd /opt/node-bank \n
+                                            sudo npm install DemoApp100-1.0.0.tgz \n
+                                                cd node_modules/DemoApp100 \n
                                                 sudo pm2 start  server/index.js  "
                             )
                         ])
