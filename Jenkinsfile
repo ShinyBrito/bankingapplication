@@ -15,7 +15,7 @@ pipeline{
                     sshPublisher(
                         continueOnError: false, failOnError: true,
                         publishers: [
-                            sshPublisherDesc( configName: 'demo-reg', verbose: false, transfers: [
+                            sshPublisherDesc( configName: 'CAPE-Test', verbose: false, transfers: [
                             sshTransfer(
                                 sourceFiles: "DemoApp100-1.0.0.tgz ",
                                 remoteDirectory: "demoapp",
