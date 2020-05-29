@@ -8,6 +8,17 @@ pipeline{
                 sh "npm pack"
             }
         }
+        stage('SonarQube analysis') {
+            environment {
+                scannerHome = tool 'SonarScanner'
+            }
+            steps{
+                withSonarQubeEnv('SONAR') {
+                    sh "${scannerHome}/bin/sonar-scanner"
+                }
+            }
+        }
+
        stage('Deploy'){
             steps{
                 script {
