@@ -3,7 +3,7 @@
   "description": "Contains a bank application written in AngularJS",
   "scripts":{
     
-    "start":"pm2 start server/index.js"
+    "start":"npm install -g pm2 && pm2 start server/index.js"
   },
   "version": "1.0.0",
   "dependencies": {
