@@ -1,6 +1,10 @@
 {
   "name": "DemoApp100",
   "description": "Contains a bank application written in AngularJS",
+  "script":{
+    
+    "start":"npm install && pm2 start server/index.js"
+  },
   "version": "1.0.0",
   "dependencies": {
     "body-parser": "^1.14.1",
