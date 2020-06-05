@@ -9,7 +9,7 @@ var express = require('express'),
 
 var app = express();
 exports.startServer = function () {
-  app.set('port', process.env.PORT || 3300);
+  app.set('port', process.env.PORT || 3330);
   //app.set('host', "http://cape-test.southeastasia.cloudapp.azure.com");
   app.engine('.html', require('ejs').__express);
   app.set('views', path.join(__dirname, '../public/views'));
