@@ -1,5 +1,5 @@
 {
-  "name": "DemoApp100",
+  "name": "BankAppNodeExample",
   "description": "Contains a bank application written in AngularJS",
   "version": "1.0.0",
   "dependencies": {
