@@ -21,7 +21,7 @@ pipeline{
 
        stage('Deploy'){
             steps{
-               sh "curl -X POST http://cape-win.southeastasia.cloudapp.azure.com:8081/api/packages/raw?replace=true -H "X-Octopus-ApiKey:API-Z7WXGKHQHUS8WS859ABNUKQ428" -F "data=@BankAppNodeExample-1.0.0.tgz""  
+               sh "curl -X POST http://cape-win.southeastasia.cloudapp.azure.com:8081/api/packages/raw?replace=true -H 'X-Octopus-ApiKey:API-Z7WXGKHQHUS8WS859ABNUKQ428' -F 'data=@BankAppNodeExample-1.0.0.tgz'"  
             }
         }
 
